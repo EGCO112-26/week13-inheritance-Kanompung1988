@@ -8,18 +8,13 @@
 class MU_person : public NODE, public Thai_person {
 private:
 	string name;
-protected:
-
 public:
 	MU_person(long=112, string="Prapaporn", long=0);
 	void display_person();
 	~MU_person();
-	long get_id(){ return data; }
 };
 
-
 MU_person::~MU_person(){
-	cout << "Destructor id=" << data << endl;
 }
 
 MU_person::MU_person(long x, string n, long nat) : NODE(x), Thai_person(nat) {

@@ -16,11 +16,9 @@ class Thai_person{
 
 Thai_person::Thai_person(long id){
 	nat_id = id;
-	cout << "Thai_person constructor nat_id=" << nat_id << endl;
 }
 
 Thai_person::~Thai_person(){
-	cout << "Thai_person destructor nat_id=" << nat_id << endl;
 }
 
 void Thai_person::display_thai(){
