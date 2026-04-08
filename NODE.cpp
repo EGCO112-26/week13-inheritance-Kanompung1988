@@ -17,7 +17,7 @@ NODE* NODE::move_next(){
 }
 
 void NODE::show_node(){
-    cout << " Node data:" << data << endl;
+    cout << "Node data:" << data << endl;
 }
 
 void NODE::insert(NODE*& x){

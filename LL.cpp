@@ -29,7 +29,7 @@ void LL::show_all(){
     }
 }
 
-void LL::add_node(NODE*& A){
+void LL::add_node(NODE* A){
     if(hol != NULL){
         hol->insert(A);  // A->next = hol (current head)
     }

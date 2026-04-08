@@ -3,10 +3,10 @@
 #define MU_PERSON_H
 
 #include "Thai_person.h"
+#include "NODE.h"
 
-class MU_person : public Thai_person {
+class MU_person : public NODE, public Thai_person {
 private:
-	long id;
 	string name;
 protected:
 
@@ -14,23 +14,22 @@ public:
 	MU_person(long=112, string="Prapaporn", long=0);
 	void display_person();
 	~MU_person();
-	long get_id(){ return id; }
+	long get_id(){ return data; }
 };
 
 
 MU_person::~MU_person(){
-	cout << "Destructor id=" << id << endl;
+	cout << "Destructor id=" << data << endl;
 }
 
-MU_person::MU_person(long x, string n, long nat) : Thai_person(nat) {
-	id   = x;
+MU_person::MU_person(long x, string n, long nat) : NODE(x), Thai_person(nat) {
 	name = n;
-	cout << "MU person constructor " << id << endl;
+	cout << "MU person constructor " << data << endl;
 }
 
 void MU_person::display_person(){
 	display_thai();
-	cout << "id=" << id << " name=" << name << endl;
+	cout << "id=" << data << " name=" << name << endl;
 }
 
 #endif
